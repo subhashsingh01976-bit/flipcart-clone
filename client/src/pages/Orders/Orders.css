@@ -1,0 +1,210 @@
+.orders-page {
+  max-width: 1300px;
+  margin: 12px auto;
+  padding: 0 12px;
+}
+
+.orders-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.orders-sidebar {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.orders-sidebar-header {
+  background: var(--primary);
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-user-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.orders-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.orders-nav-item {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.15s;
+}
+
+.orders-nav-item:hover { background: var(--primary-light); color: var(--primary); }
+.orders-nav-item:first-child { font-weight: 500; color: var(--primary); background: var(--primary-light); }
+
+/* Main */
+.orders-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.orders-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  padding: 16px 20px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Order Card */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.order-id {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: block;
+}
+
+.order-date {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.order-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Order Items */
+.order-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 14px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+.order-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.order-item-name {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.order-item-qty { font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
+.order-item-price { font-size: 14px; font-weight: 600; color: var(--text-dark); }
+
+.order-item-actions { display: flex; flex-direction: column; gap: 8px; }
+
+.order-action-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary);
+  background: white;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-family: var(--font);
+  transition: all 0.2s;
+}
+
+.order-action-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* Footer */
+.order-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #fafafa;
+}
+
+.order-total { font-size: 14px; font-weight: 600; color: var(--text-dark); }
+
+.order-detail-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+}
+
+.order-detail-btn:hover { text-decoration: underline; }
+
+/* Empty */
+.orders-empty {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.orders-empty h2 { font-size: 20px; color: var(--text-dark); }
+.orders-empty p { color: var(--text-light); }
+
+@media (max-width: 768px) {
+  .orders-layout { grid-template-columns: 1fr; }
+  .orders-sidebar { display: none; }
+  .order-item { grid-template-columns: 60px 1fr; }
+  .order-item-actions { grid-column: 1 / -1; flex-direction: row; }
+}

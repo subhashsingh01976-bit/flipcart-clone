@@ -1,0 +1,41 @@
+/* Compact Badge (Flipkart style: green box with number + star) */
+.star-compact {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: white;
+}
+
+.star-compact-num {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.star-compact-icon {
+  font-size: 10px;
+}
+
+/* Full Star Display */
+.star-full {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.star-icon.filled { color: var(--star); }
+.star-icon.half { color: var(--star); }
+.star-icon.empty { color: #e0e0e0; }
+
+.star-number {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  margin-left: 4px;
+}

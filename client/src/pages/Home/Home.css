@@ -1,0 +1,204 @@
+.home-page {
+  background: var(--bg);
+}
+
+/* Hero */
+.home-hero {
+  background: var(--primary);
+  margin-bottom: 12px;
+}
+
+/* Sections */
+.home-section {
+  background: var(--white);
+  margin-bottom: 12px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+
+.home-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.home-section-link {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.home-section-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Categories */
+.categories-section {
+  margin-top: 12px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  padding: 16px 0;
+}
+
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.category-tile:hover {
+  background: var(--bg);
+  transform: translateY(-3px);
+}
+
+.category-tile-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.category-tile:hover .category-tile-icon {
+  transform: scale(1.08);
+}
+
+.category-tile-emoji {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.category-tile-name {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+/* Products Row (horizontal scroll) */
+.home-products-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  padding: 12px;
+  gap: 12px;
+}
+
+.home-product-item {
+  min-width: 0;
+}
+
+/* Promo Banners */
+.home-promo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1300px;
+  margin: 0 auto 12px;
+  padding: 0;
+}
+
+.promo-banner {
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  min-height: 120px;
+}
+
+.promo-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.promo-fashion { background: linear-gradient(135deg, #ff3f6c 0%, #c02350 100%); }
+.promo-electronics { background: linear-gradient(135deg, #2874f0 0%, #0052cc 100%); }
+.promo-home { background: linear-gradient(135deg, #ff9f00 0%, #e65c00 100%); }
+
+.promo-content {
+  color: white;
+  z-index: 1;
+}
+
+.promo-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.promo-content p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.promo-cta {
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.promo-bg-emoji {
+  font-size: 64px;
+  opacity: 0.2;
+  position: absolute;
+  right: 16px;
+  bottom: -8px;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .categories-grid { grid-template-columns: repeat(5, 1fr); }
+  .home-products-row { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .categories-grid { grid-template-columns: repeat(4, 1fr); }
+  .home-products-row { grid-template-columns: repeat(2, 1fr); }
+  .home-promo-row { grid-template-columns: 1fr; }
+  .home-section-title { font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+  .category-tile-icon { width: 56px; height: 56px; }
+  .category-tile-emoji { font-size: 22px; }
+}

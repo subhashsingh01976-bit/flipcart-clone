@@ -1,0 +1,126 @@
+.footer {
+  background: #172337;
+  color: #b0bec5;
+  margin-top: 20px;
+}
+
+.footer-top {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+}
+
+.footer-heading {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6c757d;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-size: 13px;
+  color: #b0bec5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-icon {
+  font-size: 15px;
+}
+
+.footer-address {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #b0bec5;
+}
+
+.footer-mid-divider {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom {
+  background: #0f1c2d;
+}
+
+.footer-bottom-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-item {
+  font-size: 13px;
+  color: #b0bec5;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-bottom-item:hover { color: white; }
+
+.footer-bottom-separator {
+  color: #444;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #6c757d;
+  text-align: center;
+}
+
+.footer-app-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.app-badge {
+  font-size: 12px;
+  color: #b0bec5;
+  border: 1px solid #3a4a5c;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.app-badge:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: #607d8b;
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom-inner { flex-direction: column; align-items: flex-start; }
+}
